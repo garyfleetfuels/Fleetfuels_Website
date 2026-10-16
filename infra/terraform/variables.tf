@@ -11,9 +11,9 @@ variable "location" {
 }
 
 variable "swa_location" {
-  description = "The regional location for Azure Static Web Apps (Supported: uksouth, westeurope, northeurope, eastus2, centralus, westus2)."
+  description = "The regional location for Azure Static Web Apps (Supported: eastus2, centralus, westus2, westeurope, eastasia)."
   type        = string
-  default     = "uksouth"
+  default     = "eastus2"
 }
 
 variable "resource_group_name" {

@@ -1,7 +1,7 @@
 # Fleet Fuels Production Environment Configuration
 environment         = "prod"
 location            = "uksouth"
-swa_location        = "uksouth"
+swa_location        = "eastus2"
 resource_group_name = "rg-fleetfuels-prod"
 static_web_app_name = "swa-fleetfuels-prod"
 sku_tier            = "Standard"
