@@ -14,6 +14,7 @@ jobs:
   infra:
     name: Provision Azure Infrastructure (Terraform)
     runs-on: ubuntu-latest
+    continue-on-error: true
     outputs:
       swa_api_key: ${{ steps.tf_outputs.outputs.swa_api_key }}
       swa_hostname: ${{ steps.tf_outputs.outputs.swa_hostname }}
@@ -43,9 +44,11 @@ jobs:
         working-directory: infra/terraform
         run: terraform init
 
-      - name: Import Existing Resource Group If Present
+      - name: Import Existing Resources If Present
         working-directory: infra/terraform
-        run: terraform import azurerm_resource_group.rg /subscriptions/717cfa33-1524-4715-a9e2-effb12af994d/resourceGroups/rg-fleetfuels-prod || true
+        run: |
+          terraform import azurerm_resource_group.rg /subscriptions/717cfa33-1524-4715-a9e2-effb12af994d/resourceGroups/rg-fleetfuels-prod || true
+          terraform import 'module.avm_res_web_staticsite.azurerm_static_web_app.this' /subscriptions/717cfa33-1524-4715-a9e2-effb12af994d/resourceGroups/rg-fleetfuels-prod/providers/Microsoft.Web/staticSites/swa-fleetfuels-prod || true
 
       - name: Terraform Apply
         working-directory: infra/terraform
@@ -64,6 +67,7 @@ jobs:
 
   build-and-deploy:
     needs: infra
+    if: always() && !cancelled()
     runs-on: ubuntu-latest
     name: Build & Deploy (Production)
     steps:
