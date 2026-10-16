@@ -1,0 +1,61 @@
+---
+import { siteConfig } from '../data/siteData';
+---
+
+<section class="py-20 bg-gradient-to-br from-[#2D3136] via-[#1f2226] to-[#2D3136] text-white relative overflow-hidden">
+  <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-[#469B26]/20 rounded-full blur-3xl pointer-events-none" />
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#469B26]/30 text-[#86ef9e] text-xs font-bold uppercase tracking-wider border border-[#469B26]/40">
+      <span>Get Started in 3 Simple Steps</span>
+    </div>
+
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+      Ready to Start Saving on Every <span class="text-[#86ef9e]">Fleet Litre</span>?
+    </h2>
+
+    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+      Apply online in just 2 minutes. No upfront setup fees, no minimum usage lock-ins. Cards are dispatched via secure courier directly to your operating centre.
+    </p>
+
+    <!-- 3 Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-left">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+        <div class="w-8 h-8 rounded-lg bg-[#469B26] text-white font-black text-sm flex items-center justify-center mb-3">1</div>
+        <h3 class="text-white font-bold text-base mb-1">Apply Online</h3>
+        <p class="text-xs text-slate-300">Submit your fleet requirements and vehicle registrations in under 2 minutes.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+        <div class="w-8 h-8 rounded-lg bg-[#469B26] text-white font-black text-sm flex items-center justify-center mb-3">2</div>
+        <h3 class="text-white font-bold text-base mb-1">Rapid Approval</h3>
+        <p class="text-xs text-slate-300">Fast UK credit check and personal fleet account consultant assignment.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+        <div class="w-8 h-8 rounded-lg bg-[#469B26] text-white font-black text-sm flex items-center justify-center mb-3">3</div>
+        <h3 class="text-white font-bold text-base mb-1">Refuel & Save</h3>
+        <p class="text-xs text-slate-300">Cards dispatched and ready to use at 8,000+ UK forecourts and bunkers.</p>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="#apply"
+        class="btn-primary w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-base text-white shadow-xl flex items-center justify-center space-x-2"
+      >
+        <span>Apply for Fuel Cards Now</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+      <a
+        href={`tel:${siteConfig.phone.raw}`}
+        class="w-full sm:w-auto px-6 py-4 rounded-xl font-semibold text-sm text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/10 transition-all text-center flex items-center justify-center space-x-2"
+      >
+        <svg class="w-4 h-4 text-[#86ef9e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span>Speak to an Advisor: {siteConfig.phone.display}</span>
+      </a>
+    </div>
+  </div>
+</section>

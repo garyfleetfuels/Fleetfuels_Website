@@ -1,0 +1,12 @@
+# Robots.txt for Fleet Fuels UK
+# https://www.fleetfuels.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.fleetfuels.co.uk/sitemap-index.xml
+Sitemap: https://www.fleetfuels.co.uk/sitemap-0.xml
+
+# AI crawler guidance
+# See /llms.txt for LLM site summary

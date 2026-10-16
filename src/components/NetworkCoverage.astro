@@ -1,0 +1,92 @@
+---
+const networks = [
+  { name: 'Keyfuels Network', sites: '3,500+ Sites', focus: 'HGVs & High-Speed Bunkers', color: 'from-[#469B26] to-[#2c6319]' },
+  { name: 'UK Fuels Network', sites: '3,500+ Sites', focus: 'Multi-Brand & Supermarket', color: 'from-[#2D3136] to-[#1f2226]' },
+  { name: 'Esso National', sites: '1,200+ Sites', focus: 'Motorways & Synergy Fuel', color: 'from-[#469B26] to-[#377d1d]' },
+  { name: 'Shell Commercial CRT', sites: '1,100+ Sites', focus: 'Trunk Routes & Ports', color: 'from-[#2D3136] to-[#41464e]' },
+  { name: 'BP Plus Network', sites: '1,200+ Sites', focus: 'ACTIVE Technology & M&S', color: 'from-[#469B26] to-[#264f19]' },
+  { name: 'Texaco Fastfuel', sites: '2,000+ Sites', focus: 'Regional & Urban Forecourts', color: 'from-[#2D3136] to-[#131518]' },
+];
+---
+
+<section id="network" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#469B26_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left Column -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#469B26]/20 border border-[#469B26]/40 text-[#86ef9e] text-xs font-bold uppercase tracking-wider">
+          <span>Nationwide UK Forecourt Density</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Over <span class="text-[#86ef9e]">8,000+ Fuel Stations</span> Across the British Isles
+        </h2>
+
+        <p class="text-slate-300 text-base leading-relaxed">
+          From John o' Groats to Land's End, our multi-network cards ensure your drivers never have to take wasteful detours or pay exorbitant motorway pump prices.
+        </p>
+
+        <ul class="space-y-3 text-sm text-slate-200">
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            24/7 access on all major UK motorways (M1, M6, M25, M4, M5, A1(M))
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Dedicated high-flow HGV diesel bunker sites & raised canopies
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Supermarket forecourt integration (Morrisons, Tesco, Asda, Sainsbury's)
+          </li>
+          <li class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Free driver mobile app to locate nearest approved card station
+          </li>
+        </ul>
+
+        <div class="pt-2">
+          <a
+            href="#apply"
+            class="btn-primary inline-flex items-center px-6 py-3 rounded-xl font-bold text-sm text-white shadow-lg"
+          >
+            <span>Request Route Coverage Check</span>
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Network Cards Grid -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {networks.map((net) => (
+          <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-[#469B26]/60 backdrop-blur-sm transition-all hover:translate-y-[-2px] group">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-lg font-black text-white group-hover:text-[#86ef9e] transition-colors">{net.name}</h3>
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#469B26] text-white">
+                {net.sites}
+              </span>
+            </div>
+            <p class="text-xs text-slate-400 font-medium mb-3">
+              Focus: {net.focus}
+            </p>
+            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+              <div class={`h-full bg-gradient-to-r ${net.color} w-full rounded-full`} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

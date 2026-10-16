@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@theme {
+  --color-brand-green-50: #f0fdf2;
+  --color-brand-green-100: #dcfce4;
+  --color-brand-green-200: #bbf7cb;
+  --color-brand-green-300: #86ef9e;
+  --color-brand-green-400: #5bb834;
+  --color-brand-green-500: #469B26;
+  --color-brand-green-600: #377d1d;
+  --color-brand-green-700: #2c6319;
+  --color-brand-green-800: #264f19;
+  --color-brand-green-900: #204217;
+  --color-brand-green-950: #0d240a;
+  --color-brand-green: #469B26;
+
+  --color-brand-charcoal-50: #f6f7f8;
+  --color-brand-charcoal-100: #eceef0;
+  --color-brand-charcoal-200: #d5d8dc;
+  --color-brand-charcoal-300: #b2b8bf;
+  --color-brand-charcoal-400: #87909a;
+  --color-brand-charcoal-500: #646c76;
+  --color-brand-charcoal-600: #4f555e;
+  --color-brand-charcoal-700: #41464e;
+  --color-brand-charcoal-800: #2D3136;
+  --color-brand-charcoal-900: #1f2226;
+  --color-brand-charcoal-950: #131518;
+  --color-brand-charcoal: #2D3136;
+
+  --color-brand-accent-light: #EBF5E9;
+  --color-brand-accent-mint: #D8F3DC;
+
+  --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Core typography & behavior */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #2D3136;
+  background-color: #F8FAFC;
+}
+
+::selection {
+  background-color: #469B26;
+  color: #ffffff;
+}
+
+/* Micro-interactions and subtle glow effects */
+.btn-primary {
+  background: linear-gradient(135deg, #469B26 0%, #377d1d 100%);
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(70, 155, 38, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px 0 rgba(70, 155, 38, 0.45);
+  background: linear-gradient(135deg, #4ea82c 0%, #377d1d 100%);
+}
+
+.btn-secondary {
+  background-color: #2D3136;
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background-color: #1f2226;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px 0 rgba(45, 49, 54, 0.25);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(70, 155, 38, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  border-color: rgba(70, 155, 38, 0.35);
+}

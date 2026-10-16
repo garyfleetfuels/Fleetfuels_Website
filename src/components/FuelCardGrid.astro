@@ -1,0 +1,183 @@
+---
+import { fuelCards } from '../data/fuelCards';
+---
+
+<section id="fuel-cards" class="py-20 bg-slate-50 relative overflow-hidden">
+  <!-- Subtle ambient decorative glow -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#469B26]/5 rounded-full blur-3xl pointer-events-none" />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#EBF5E9] text-[#469B26] text-xs font-bold uppercase tracking-wider mb-4 border border-[#bbf7cb]">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Compare UK Fuel Card Networks</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#2D3136] tracking-tight">
+        Commercial Fuel Cards Tailored to <span class="text-[#469B26]">Your Fleet</span>
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+        Whether you operate a fleet of 5 vans, a national haulage logistics enterprise, or executive company cars, choose the fuel card network that maximises your savings and route efficiency.
+      </p>
+
+      <!-- Vehicle Filter Tabs -->
+      <div class="mt-8 flex flex-wrap justify-center gap-2 p-1.5 bg-white rounded-xl shadow-xs border border-slate-200 max-w-md mx-auto">
+        <button
+          type="button"
+          data-filter="all"
+          class="filter-tab active px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all bg-[#469B26] text-white shadow-xs"
+        >
+          All Cards
+        </button>
+        <button
+          type="button"
+          data-filter="HGVs"
+          class="filter-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-medium text-slate-700 hover:text-[#469B26] hover:bg-slate-50 transition-all"
+        >
+          HGVs & Trucks
+        </button>
+        <button
+          type="button"
+          data-filter="Vans"
+          class="filter-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-medium text-slate-700 hover:text-[#469B26] hover:bg-slate-50 transition-all"
+        >
+          Vans & LCVs
+        </button>
+        <button
+          type="button"
+          data-filter="Cars"
+          class="filter-tab px-4 py-2 rounded-lg text-xs sm:text-sm font-medium text-slate-700 hover:text-[#469B26] hover:bg-slate-50 transition-all"
+        >
+          Company Cars
+        </button>
+      </div>
+    </div>
+
+    <!-- Fuel Cards Grid -->
+    <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {fuelCards.map((card) => (
+        <div
+          class="card-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group hover:border-[#469B26]/50"
+          data-vehicles={card.vehicleTypes.join(',')}
+        >
+          <!-- Card Header Banner -->
+          <div class="p-6 border-b border-slate-100 bg-gradient-to-br from-white to-slate-50/60 relative">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#EBF5E9] text-[#469B26] border border-[#bbf7cb]/60">
+                {card.badge}
+              </span>
+              <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
+                {card.sitesCount}
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-[#2D3136] tracking-tight group-hover:text-[#469B26] transition-colors">
+              {card.name}
+            </h3>
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1">
+              Network: {card.network}
+            </p>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-6 flex-grow flex flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <!-- Highlight Callout -->
+              <div class="bg-slate-50 rounded-xl p-3.5 border-l-4 border-[#469B26] text-xs font-semibold text-[#2D3136] leading-relaxed">
+                💡 {card.highlight}
+              </div>
+
+              <!-- Pricing Type Badge -->
+              <div class="flex items-center justify-between text-xs py-1 border-b border-slate-100 text-slate-600">
+                <span class="text-slate-500">Pricing Model:</span>
+                <span class="font-bold text-[#2D3136]">{card.pricingType}</span>
+              </div>
+
+              <!-- Suitable Vehicles -->
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-xs text-slate-400 mr-1">Best suited:</span>
+                {card.vehicleTypes.map((v) => (
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-[#2D3136]">
+                    {v}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Key Features -->
+              <div class="pt-2">
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Key Card Benefits</p>
+                <ul class="space-y-2 text-xs text-slate-700">
+                  {card.features.map((feature) => (
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-[#469B26] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span class="leading-snug">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+              <a
+                href="#apply"
+                class="w-full btn-primary py-2.5 px-4 rounded-xl text-center text-xs sm:text-sm font-bold text-white shadow-md flex items-center justify-center space-x-1"
+              >
+                <span>Choose {card.name.split(' ')[0]} Card</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="#network"
+                class="w-full text-center py-2 text-xs font-semibold text-slate-600 hover:text-[#469B26] transition-colors"
+              >
+                View Forecourt Coverage Map
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Notice -->
+    <div class="mt-12 text-center text-xs text-slate-500 bg-white border border-slate-200/80 rounded-xl p-4 max-w-2xl mx-auto shadow-xs">
+      <p class="font-medium">
+        Unsure which card fits your fleet geography? Call our UK fuel advisors on <a href="tel:+448000123456" class="text-[#469B26] font-bold underline">0800 012 3456</a> for an instant fleet route audit.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple client-side filter for fuel card vehicle types
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.filter-tab');
+  const cards = document.querySelectorAll<HTMLElement>('.card-item');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      // Toggle active tab style
+      tabs.forEach((t) => {
+        t.classList.remove('active', 'bg-[#469B26]', 'text-white', 'shadow-xs');
+        t.classList.add('text-slate-700');
+      });
+      tab.classList.add('active', 'bg-[#469B26]', 'text-white', 'shadow-xs');
+      tab.classList.remove('text-slate-700');
+
+      const filter = tab.getAttribute('data-filter') || 'all';
+
+      cards.forEach((card) => {
+        const vehicles = card.getAttribute('data-vehicles') || '';
+        if (filter === 'all' || vehicles.includes(filter)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

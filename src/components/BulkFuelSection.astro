@@ -1,0 +1,78 @@
+---
+const solutions = [
+  {
+    title: 'Commercial Bulk Diesel (EN 590)',
+    subtitle: 'Nationwide On-Site Tank Refills',
+    desc: 'Keep your depot running at peak productivity with scheduled or on-demand articulated tanker deliveries of standard commercial road diesel (DERV).',
+    specs: ['From 1,000L to 36,000L drops', 'Same-day emergency delivery available', 'Direct telemetry tank monitoring option'],
+    badge: 'Depot Bulk',
+  },
+  {
+    title: 'HVO Renewable Diesel',
+    subtitle: 'Cut Fleet Carbon by up to 90%',
+    desc: 'Direct drop-in replacement for conventional diesel requiring zero engine modifications. Meets EN 15940 standards for ultra-clean burning.',
+    specs: ['90% lifecycle greenhouse gas reduction', 'ISCC-certified sustainable feedstocks', 'Improved cold weather engine starts'],
+    badge: 'Net Zero Ready',
+  },
+  {
+    title: 'AdBlue Solutions',
+    subtitle: 'Bulk, IBCs & Forecourt Pumps',
+    desc: 'High-purity VDA-certified AUS32 diesel exhaust fluid. Available delivered in 1,000L IBCs, 210L barrels, or accessible at the pump via fuel cards.',
+    specs: ['ISO 22241 certified purity', 'Bulk tanker discharge directly into yard tanks', 'Dispensing pumps & telemetry bundles'],
+    badge: 'Emissions Care',
+  },
+];
+---
+
+<section id="bulk-fuel" class="py-20 bg-slate-50 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-[#EBF5E9] text-[#469B26] text-xs font-bold uppercase tracking-wider mb-3">
+        Commercial Energy Solutions
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black text-[#2D3136] tracking-tight">
+        Bulk Fuel, HVO & <span class="text-[#469B26]">AdBlue Supplies</span>
+      </h2>
+      <p class="mt-4 text-slate-600 text-base sm:text-lg">
+        In addition to nationwide forecourt cards, Fleet Fuels delivers high-grade bulk road fuels directly to your depot tanks.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {solutions.map((item) => (
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-[#EBF5E9] text-[#469B26]">
+                {item.badge}
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-[#2D3136]">{item.title}</h3>
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-1 mb-3">{item.subtitle}</p>
+            <p class="text-sm text-slate-600 leading-relaxed mb-6">{item.desc}</p>
+
+            <div class="space-y-2 border-t border-slate-100 pt-4">
+              {item.specs.map((spec) => (
+                <div class="flex items-center text-xs text-slate-700">
+                  <svg class="w-4 h-4 mr-2 text-[#469B26] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{spec}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a
+              href="#apply"
+              class="w-full btn-secondary py-2.5 px-4 rounded-xl text-center text-xs font-bold text-white block hover:bg-[#1f2226]"
+            >
+              Enquire for Bulk Quotation
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

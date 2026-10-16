@@ -1,0 +1,18 @@
+# Fleet Fuels Production Environment Configuration
+environment         = "prod"
+location            = "uksouth"
+swa_location        = "westeurope"
+resource_group_name = "rg-fleetfuels-prod-uks"
+static_web_app_name = "stapp-fleetfuels-prod-uks"
+sku_tier            = "Standard"
+sku_size            = "Standard"
+custom_domain_name  = "fleetfuels.co.uk"
+custom_domain_www   = "www.fleetfuels.co.uk"
+
+tags = {
+  Project     = "Fleet Fuels Production Website"
+  ManagedBy   = "Terraform"
+  Environment = "Production"
+  Owner       = "Gary / Fleet Fuels"
+  Repository  = "https://github.com/garyfleetfuels/Fleetfuels_Website"
+}
