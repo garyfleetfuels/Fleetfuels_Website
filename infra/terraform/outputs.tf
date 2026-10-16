@@ -9,7 +9,7 @@ output "static_web_app_default_hostname" {
 }
 
 output "static_web_app_api_key" {
-  description = "The API/Deployment Token for GitHub Actions CI/CD (Secret: AZURE_STATIC_WEB_APPS_API_TOKEN)."
+  description = "The API/Deployment Token for GitHub Actions CI/CD."
   value       = module.avm_res_web_staticsite.api_key
   sensitive   = true
 }
@@ -17,6 +17,7 @@ output "static_web_app_api_key" {
 output "static_web_app_id" {
   description = "The Azure Resource ID of the Static Web App."
   value       = module.avm_res_web_staticsite.resource_id
+  sensitive   = true
 }
 
 output "static_web_app_name" {

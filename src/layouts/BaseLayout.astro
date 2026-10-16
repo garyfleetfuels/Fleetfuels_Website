@@ -14,7 +14,7 @@ interface Props {
 const {
   title = `${siteConfig.name} | Commercial Fleet Fuel Cards & Nationwide Management`,
   description = siteConfig.description,
-  ogImage = '/images/logo.svg',
+  ogImage = '/images/fleet_fuels_logo_with_tagline.jpg',
   canonicalUrl = Astro.url.href,
 } = Astro.props;
 
@@ -28,7 +28,7 @@ const structuredData = {
       url: siteConfig.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/images/logo.svg`,
+        url: `${siteConfig.url}/images/fleet_fuels_logo_with_tagline.jpg`,
       },
       description: siteConfig.description,
       telephone: siteConfig.phone.display,
@@ -67,6 +67,8 @@ const structuredData = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512x512.png" />
+    <link rel="apple-touch-icon" href="/favicon_512x512.png" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
