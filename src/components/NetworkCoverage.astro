@@ -1,11 +1,40 @@
 ---
-const networks = [
-  { name: 'Keyfuels Network', sites: '3,500+ Sites', focus: 'HGVs & High-Speed Bunkers', color: 'from-[#469B26] to-[#2c6319]' },
-  { name: 'UK Fuels Network', sites: '3,500+ Sites', focus: 'Multi-Brand & Supermarket', color: 'from-[#2D3136] to-[#1f2226]' },
-  { name: 'Esso National', sites: '1,200+ Sites', focus: 'Motorways & Synergy Fuel', color: 'from-[#469B26] to-[#377d1d]' },
-  { name: 'Shell Commercial CRT', sites: '1,100+ Sites', focus: 'Trunk Routes & Ports', color: 'from-[#2D3136] to-[#41464e]' },
-  { name: 'BP Plus Network', sites: '1,200+ Sites', focus: 'ACTIVE Technology & M&S', color: 'from-[#469B26] to-[#264f19]' },
-  { name: 'Texaco Fastfuel', sites: '2,000+ Sites', focus: 'Regional & Urban Forecourts', color: 'from-[#2D3136] to-[#131518]' },
+const forecourtNetworks = [
+  {
+    name: 'UK Fuels Network',
+    sites: '3,500+ Forecourts',
+    highlights: 'Multi-brand network with widespread Morrisons, Tesco, and regional independent supermarket forecourts.',
+    bestFor: 'Regional delivery fleets, trades, couriers, and local service vans.',
+    badge: 'Multi-Brand & Supermarkets',
+  },
+  {
+    name: 'Fastfuel Network',
+    sites: '3,500+ Forecourts',
+    highlights: 'Combines all national Texaco sites with UK Fuels partner forecourts for exceptional suburban and rural density.',
+    bestFor: 'Mixed commercial vehicle fleets, trade vans, and local delivery routes.',
+    badge: 'Texaco & UK Fuels Partner',
+  },
+  {
+    name: 'Shell Fleet Network',
+    sites: '1,100+ Shell & 2,500+ Partners',
+    highlights: 'Commanding coverage across all UK motorway service areas, strategic trunk routes, ports, and FuelSave technology.',
+    bestFor: 'Motorway logistics, executive company cars, and high-mileage trunking.',
+    badge: 'Motorways & Shell FuelSave',
+  },
+  {
+    name: 'BP National Network',
+    sites: '1,200+ BP & 2,000+ Cross-Acceptance',
+    highlights: 'Extensive motorway corridors with high-flow commercial pumps, BP ACTIVE diesel, and M&S Simply Food forecourt amenities.',
+    bestFor: 'High-volume logistics, long-distance van couriers, and driver convenience.',
+    badge: 'BP Trunk Road & ACTIVE Diesel',
+  },
+  {
+    name: 'Esso Network',
+    sites: '1,200+ Esso & 2,000+ Partner Forecourts',
+    highlights: 'Strategic commuter corridors, A-roads, and motorways with Esso Synergy fuels and Shell/BP cross-acceptance.',
+    bestFor: 'Commuter transit, sales representatives, private hire, and regional fleets.',
+    badge: 'Esso Synergy & Commuter Routes',
+  },
 ];
 ---
 
@@ -14,75 +43,80 @@ const networks = [
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Left Column -->
+      <!-- Left Column: Copy -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#469B26]/20 border border-[#469B26]/40 text-[#86ef9e] text-xs font-bold uppercase tracking-wider">
-          <span>Nationwide UK Forecourt Density</span>
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#469B26]/20 border border-[#469B26]/40 text-[#86ef9e] text-xs font-bold uppercase tracking-wider">
+          <span>Nationwide UK Coverage</span>
         </div>
 
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          Over <span class="text-[#86ef9e]">8,000+ Fuel Stations</span> Across the British Isles
+          Over <span class="text-[#86ef9e]">8,000+ Fuel Stations</span> Across the UK
         </h2>
 
         <p class="text-slate-300 text-base leading-relaxed">
-          From John o' Groats to Land's End, our multi-network cards ensure your drivers never have to take wasteful detours or pay exorbitant motorway pump prices.
+          We match cards to the routes your drivers already take. No costly route detours, no hunting for accepted stations, and no paying inflated roadside pump prices.
         </p>
 
-        <ul class="space-y-3 text-sm text-slate-200">
-          <li class="flex items-center">
-            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <ul class="space-y-3.5 text-sm text-slate-200">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            24/7 access on all major UK motorways (M1, M6, M25, M4, M5, A1(M))
+            <span><strong>24/7 Motorway Access:</strong> Complete coverage along M1, M6, M25, M4, M5, and A1(M) transit corridors.</span>
           </li>
-          <li class="flex items-center">
-            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            Dedicated high-flow HGV diesel bunker sites & raised canopies
+            <span><strong>Commercial HGV Bunker Sites:</strong> Raised canopies, high-speed pumps, and wide turning space for haulage.</span>
           </li>
-          <li class="flex items-center">
-            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            Supermarket forecourt integration (Morrisons, Tesco, Asda, Sainsbury's)
+            <span><strong>Supermarket Forecourts:</strong> Enjoy low pump rates and convenient urban refuelling at major supermarkets.</span>
           </li>
-          <li class="flex items-center">
-            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-3 text-[#86ef9e] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            Free driver mobile app to locate nearest approved card station
+            <span><strong>Route Analysis:</strong> We map your fleet’s postal routes to find the exact cards offering maximum forecourt density.</span>
           </li>
         </ul>
 
         <div class="pt-2">
           <a
-            href="#apply"
-            class="btn-primary inline-flex items-center px-6 py-3 rounded-xl font-bold text-sm text-white shadow-lg"
+            href="#compare"
+            class="btn-primary inline-flex items-center px-6 py-3.5 rounded-xl font-bold text-sm text-white shadow-lg space-x-2"
           >
-            <span>Request Route Coverage Check</span>
-            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span>Check Forecourt Density for Your Routes</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
         </div>
       </div>
 
-      <!-- Right Column: Network Cards Grid -->
-      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {networks.map((net) => (
-          <div class="p-5 rounded-xl bg-white/5 border border-white/10 hover:border-[#469B26]/60 backdrop-blur-sm transition-all hover:translate-y-[-2px] group">
-            <div class="flex items-center justify-between mb-3">
-              <h3 class="text-lg font-black text-white group-hover:text-[#86ef9e] transition-colors">{net.name}</h3>
-              <span class="text-xs font-bold px-2 py-0.5 rounded bg-[#469B26] text-white">
-                {net.sites}
+      <!-- Right Column: 5 Network Cards -->
+      <div class="lg:col-span-7 space-y-3.5">
+        {forecourtNetworks.map((net) => (
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#469B26]/60 backdrop-blur-sm transition-all hover:bg-white/10 group">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+              <div class="flex items-center space-x-2">
+                <h3 class="text-lg font-black text-white group-hover:text-[#86ef9e] transition-colors">{net.name}</h3>
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-[#469B26] text-white">
+                  {net.sites}
+                </span>
+              </div>
+              <span class="text-xs font-semibold text-slate-400 bg-white/5 px-2.5 py-0.5 rounded-md self-start sm:self-auto">
+                {net.badge}
               </span>
             </div>
-            <p class="text-xs text-slate-400 font-medium mb-3">
-              Focus: {net.focus}
+            <p class="text-xs text-slate-300 leading-relaxed">
+              {net.highlights}
             </p>
-            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-              <div class={`h-full bg-gradient-to-r ${net.color} w-full rounded-full`} />
+            <div class="mt-2 text-[11px] text-[#86ef9e] font-medium flex items-center">
+              <span>Best for: {net.bestFor}</span>
             </div>
           </div>
         ))}

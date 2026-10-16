@@ -1,72 +1,121 @@
 ---
-const benefits = [
+const pillars = [
   {
-    title: 'Fixed Weekly Wholesale Diesel',
-    description: 'Avoid volatile pump markups. We send you a fixed wholesale price every Friday applicable across national commercial networks all week.',
-    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    title: "Competitive Fuel Prices",
+    subtitle: "Big Fleet Rates Regardless of Volume",
+    description:
+      "We believe access to competitive wholesale commercial fuel prices shouldn’t depend on running 50 lorries. We secure preferential wholesale pricing for fleets of any size.",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   {
-    title: 'HMRC-Approved Consolidated VAT Invoices',
-    description: 'Say goodbye to chasing paper receipts from drivers. Receive a single weekly itemised VAT invoice pre-formatted for seamless HMRC accounting and zero-fuss VAT reclamation.',
-    icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+    title: "No Creeping Margins",
+    subtitle: "Fixed Wholesale Margin Integrity",
+    description:
+      "We do not win your business with a teaser discount only to quietly inflate our margins a few weeks later. The transparent rate structure you start with is the one you keep.",
+    icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
   },
   {
-    title: 'Anti-Fraud & PIN Security Controls',
-    description: 'Assign cards to specific vehicle registrations or named drivers. Set daily expenditure limits, restrict product purchases (fuel only, fuel + AdBlue, oil), and freeze cards instantly.',
-    icon: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
+    title: "No Weekly Negotiations",
+    subtitle: "Stop Calling to Chase Fair Pricing",
+    description:
+      "Never waste another Friday calling your fuel card company to haggle, complain, or renegotiate creeping rates. We keep your pricing competitive automatically.",
+    icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
   },
   {
-    title: 'Dedicated UK Account Specialist',
-    description: 'No frustrating call queues or automated chat bots. You get a direct phone number to a named UK fleet specialist who monitors your usage and advises on route optimisation.',
-    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z',
+    title: "Big Fleet Buying Power",
+    subtitle: "Commercial Parity for Independent Fleets",
+    description:
+      "By pooling volume across thousands of UK vehicles, we give independent transport firms, tradespeople, and courier fleets the same buying leverage as multinational corporations.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
   },
   {
-    title: 'Zero Surcharges at Bunker Sites',
-    description: 'Take advantage of heavy commercial bunker facilities without paying premium service-station markup fees, saving transport businesses thousands annually.',
-    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    title: "Multiple UK Networks",
+    subtitle: "Coverage Matched to Exact Driver Routes",
+    description:
+      "Choose from UK Fuels, Fastfuel, Shell, BP, and Esso. We match your cards to the routes your drivers actually travel, eliminating wasteful detours and motorway pump markups.",
+    icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7",
   },
   {
-    title: 'Telematics & Mileage Tracking',
-    description: 'Drivers prompt for odometer mileage at every refuel. Track fleet MPG efficiency, detect abnormal fuel consumption, and integrate data into your existing fleet management suite.',
-    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+    title: "Personal, Reliable Service",
+    subtitle: "Direct UK Support & HMRC Compliance",
+    description:
+      "Enjoy a dedicated British account manager who knows your fleet by name. Receive single weekly HMRC-compliant VAT invoices with full vehicle and driver breakdown.",
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
   },
 ];
 ---
 
-<section id="benefits" class="py-20 bg-white">
+<section id="why-us" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="inline-flex items-center px-3 py-1 rounded-full bg-[#EBF5E9] text-[#469B26] text-xs font-bold uppercase tracking-wider mb-3">
+      <span
+        class="inline-flex items-center px-3.5 py-1 rounded-full bg-[#EBF5E9] text-[#469B26] text-xs font-bold uppercase tracking-wider mb-4 border border-[#bbf7cb]"
+      >
         Why Choose Fleet Fuels
       </span>
-      <h2 class="text-3xl sm:text-4xl font-black text-[#2D3136] tracking-tight">
-        Engineered to Put <span class="text-[#469B26]">Fleet Control</span> Back in Your Hands
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#2D3136] tracking-tight"
+      >
+        A Better Way to Buy <br class="hidden sm:inline" />
+        <span class="text-[#469B26]">Commercial Fleet Fuel</span>
       </h2>
-      <p class="mt-4 text-slate-600 text-base sm:text-lg">
-        Eliminate administrative headaches and lower total cost of fleet ownership with proven commercial fuel card infrastructure.
+      <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+        Built specifically around what British fleet operators need: consistent
+        wholesale pricing, transparent invoices, and personal service without
+        corporate games.
       </p>
     </div>
 
+    <!-- 6 Pillars Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {benefits.map((b) => (
-        <div class="p-6 rounded-2xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-[#469B26]/40 hover:shadow-xl transition-all duration-300 card-hover-effect flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-[#EBF5E9] text-[#469B26] flex items-center justify-center mb-5">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={b.icon} />
+      {
+        pillars.map((p) => (
+          <div class="p-7 rounded-3xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-[#469B26]/50 hover:shadow-xl transition-all duration-300 card-hover-effect flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-[#EBF5E9] text-[#469B26] flex items-center justify-center mb-5 shadow-xs">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d={p.icon}
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-black text-[#2D3136] mb-1">{p.title}</h3>
+              <p class="text-xs font-bold text-[#469B26] uppercase tracking-wider mb-3">
+                {p.subtitle}
+              </p>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                {p.description}
+              </p>
+            </div>
+
+            <div class="pt-4 mt-6 border-t border-slate-100 flex items-center text-xs font-bold text-[#469B26]">
+              <span>Standard with Fleet Fuels</span>
+              <svg
+                class="w-4 h-4 ml-1.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
-            <h3 class="text-xl font-black text-[#2D3136] mb-2">{b.title}</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">{b.description}</p>
           </div>
-          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center text-xs font-bold text-[#469B26]">
-            <span>Included on all fleet accounts</span>
-            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

@@ -2,17 +2,18 @@
 environment         = "prod"
 location            = "uksouth"
 swa_location        = "westeurope"
-resource_group_name = "rg-fleetfuels-prod-uks"
-static_web_app_name = "stapp-fleetfuels-prod-uks"
+resource_group_name = "rg-fleetfuels-prod"
+static_web_app_name = "swa-fleetfuels-prod"
 sku_tier            = "Standard"
 sku_size            = "Standard"
 custom_domain_name  = "fleetfuels.co.uk"
 custom_domain_www   = "www.fleetfuels.co.uk"
 
 tags = {
-  Project     = "Fleet Fuels Production Website"
+  Project     = "Fleet Fuels Production Platform"
   ManagedBy   = "Terraform"
   Environment = "Production"
+  CostCenter  = "Digital-Infrastructure"
   Owner       = "Gary / Fleet Fuels"
   Repository  = "https://github.com/garyfleetfuels/Fleetfuels_Website"
 }

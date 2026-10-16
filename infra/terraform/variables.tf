@@ -1,17 +1,17 @@
 variable "environment" {
-  description = "The target environment name (e.g. prod, staging)."
+  description = "The target environment name (e.g., prod, staging)."
   type        = string
   default     = "prod"
 }
 
 variable "location" {
-  description = "The Azure region for the resource group and services (e.g. uksouth, westeurope)."
+  description = "The Azure region for the resource group (e.g., uksouth, westeurope)."
   type        = string
   default     = "uksouth"
 }
 
 variable "swa_location" {
-  description = "The regional location for Azure Static Web Apps (Supported locations: westeurope, northeurope, uksouth, eastus2, centralus, westus2)."
+  description = "The regional location for Azure Static Web Apps (Supported: westeurope, northeurope, uksouth, eastus2, centralus, westus2)."
   type        = string
   default     = "westeurope"
 }
@@ -19,17 +19,17 @@ variable "swa_location" {
 variable "resource_group_name" {
   description = "Name of the Azure Resource Group."
   type        = string
-  default     = "rg-fleetfuels-prod-uks"
+  default     = "rg-fleetfuels-prod"
 }
 
 variable "static_web_app_name" {
   description = "Name of the Azure Static Web App instance."
   type        = string
-  default     = "stapp-fleetfuels-prod-uks"
+  default     = "swa-fleetfuels-prod"
 }
 
 variable "sku_tier" {
-  description = "The SKU tier of the Static Web App. 'Free' or 'Standard'."
+  description = "The SKU tier of the Static Web App. 'Free' or 'Standard' (Standard is required for enterprise custom domains and SLA)."
   type        = string
   default     = "Standard"
   validation {
@@ -57,12 +57,13 @@ variable "custom_domain_www" {
 }
 
 variable "tags" {
-  description = "Resource tags applied to all provisioned infrastructure."
+  description = "Resource tags applied to all provisioned infrastructure for cost and environment governance."
   type        = map(string)
   default = {
-    Project     = "Fleet Fuels Production Website"
+    Project     = "Fleet Fuels Production Platform"
     ManagedBy   = "Terraform"
     Environment = "Production"
+    CostCenter  = "Digital-Infrastructure"
     Owner       = "Gary / Fleet Fuels"
     Repository  = "https://github.com/garyfleetfuels/Fleetfuels_Website"
   }

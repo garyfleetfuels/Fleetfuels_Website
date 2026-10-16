@@ -8,10 +8,9 @@ export interface SiteConfig {
   name: string;
   shortName: string;
   tagline: string;
+  slogan: string;
   description: string;
   url: string;
-  companyNumber?: string;
-  vatNumber?: string;
   phone: {
     display: string;
     raw: string;
@@ -38,9 +37,10 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: 'Fleet Fuels',
   shortName: 'FleetFuels',
-  tagline: 'Commercial Fuel Cards & Nationwide Fleet Management',
+  tagline: 'Fuelling your fleet, powering your business',
+  slogan: 'Big Fleet Prices. Small Business Service.',
   description:
-    'Reduce fleet refuelling costs with Fleet Fuels commercial fuel cards. Fixed wholesale pricing, HMRC-compliant VAT reporting, and access to over 8,000+ UK forecourts.',
+    'Big Fleet Prices. Whatever the Size of Your Business. Competitive commercial fuel cards with transparent pricing, zero creeping margins, and no weekly negotiations across the UK.',
   url: 'https://www.fleetfuels.co.uk',
   phone: {
     display: '0800 012 3456',
@@ -53,48 +53,49 @@ export const siteConfig: SiteConfig = {
   },
   officeHours: 'Monday - Friday: 08:30 - 17:30 GMT',
   address: {
-    line1: 'Fleet Fuels Business Park',
+    line1: 'Fleet Fuels UK',
     city: 'London',
     country: 'United Kingdom',
     postcode: 'EC2A 4NE',
   },
   nav: [
+    { name: 'Why Fleet Fuels', href: '#no-creeping-margins' },
     { name: 'Fuel Cards', href: '#fuel-cards' },
-    { name: 'Coverage Network', href: '#network' },
-    { name: 'Cost Savings', href: '#savings' },
-    { name: 'Bulk Fuel & AdBlue', href: '#bulk-fuel' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Who We Help', href: '#target-fleets' },
+    { name: 'Network Coverage', href: '#network' },
+    { name: 'Compare Rates', href: '#compare' },
   ],
   footerNav: [
     {
       title: 'Fuel Card Networks',
       items: [
-        { name: 'Keyfuels Card', href: '#fuel-cards' },
         { name: 'UK Fuels Card', href: '#fuel-cards' },
-        { name: 'Esso Commercial Card', href: '#fuel-cards' },
-        { name: 'Shell Fleet Card', href: '#fuel-cards' },
-        { name: 'BP Plus Card', href: '#fuel-cards' },
-        { name: 'Texaco Fastfuel', href: '#fuel-cards' },
+        { name: 'Fastfuel Card', href: '#fuel-cards' },
+        { name: 'Shell Card', href: '#fuel-cards' },
+        { name: 'BP Card', href: '#fuel-cards' },
+        { name: 'Esso Card', href: '#fuel-cards' },
       ],
     },
     {
-      title: 'Fleet Solutions',
+      title: 'Target Fleets',
       items: [
-        { name: 'Fixed Wholesale Pricing', href: '#savings' },
-        { name: 'HMRC VAT Consolidation', href: '#benefits' },
-        { name: 'Bulk Fuel & HVO', href: '#bulk-fuel' },
-        { name: 'AdBlue Solutions', href: '#bulk-fuel' },
-        { name: 'Forecourt Network Map', href: '#network' },
+        { name: 'Large HGV Fleets', href: '#target-fleets' },
+        { name: 'Small Haulage & Transport', href: '#target-fleets' },
+        { name: 'Delivery Vans & Couriers', href: '#target-fleets' },
+        { name: 'Single Commercial Vans', href: '#target-fleets' },
+        { name: 'Taxi & Private Hire', href: '#target-fleets' },
+        { name: 'Trades & Contractors', href: '#target-fleets' },
       ],
     },
     {
-      title: 'Company & Legal',
+      title: 'Company & Compliance',
       items: [
-        { name: 'About Fleet Fuels', href: '#about' },
+        { name: 'No Creeping Margins Guarantee', href: '#no-creeping-margins' },
+        { name: 'HMRC-Compliant Invoicing', href: '#why-us' },
+        { name: 'Compare Fuel Rates', href: '#compare' },
         { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'LLM Search Index (/llms.txt)', href: '/llms.txt' },
+        { name: 'Terms & Conditions', href: '/terms' },
+        { name: 'AI Machine Index (/llms.txt)', href: '/llms.txt' },
       ],
     },
   ],

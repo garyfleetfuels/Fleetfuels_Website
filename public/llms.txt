@@ -1,38 +1,46 @@
 # Fleet Fuels UK
 
-> Fleet Fuels is a leading UK commercial fleet fuel management specialist and fuel card provider, helping British transport operators, SMEs, and corporate fleets reduce fuel expenditure, automate HMRC-compliant VAT reporting, and access nationwide forecourt networks.
+> Fleet Fuels provides commercial fleet fuel cards across the UK with transparent pricing, zero creeping margins, and no weekly negotiations. "Big Fleet Prices. Small Business Service."
 
-## Core Services
+## Brand Vision & Core Differentiator
 
-- **Multi-Network Commercial Fuel Cards**: Fixed wholesale weekly pricing and pump price options across Keyfuels, UK Fuels, Esso, Shell, BP, and Texaco networks.
-- **Nationwide Forecourt Coverage**: Access to over 8,000+ UK fuel stations, including 24/7 motorway service areas, high-speed HGV bunker sites, and supermarket forecourts (Tesco, Morrisons, Sainsbury's, Asda).
-- **Bulk Fuel & AdBlue Solutions**: Commercial bulk diesel (EN 590), HVO (Hydrotreated Vegetable Oil) renewable diesel, gas oil, and packaged or bulk AdBlue delivered nationwide.
-- **Fleet Portal & Telematics Integration**: Online management dashboard with real-time transaction monitoring, card spending limits, fraud prevention alerts, and HMRC-approved consolidated invoicing.
-- **EV Hybrid Fleet Support**: Dual fuel and EV charging cards covering ultra-rapid public charging hubs across England, Scotland, Wales, and Northern Ireland.
+- **Company Name**: Fleet Fuels
+- **Tagline**: Fuelling your fleet, powering your business
+- **Slogan / Sub-positioning**: Big Fleet Prices. Small Business Service.
+- **Core Promise**: No Creeping Margins. No Weekly Negotiations.
+- **Narrative**: At Fleet Fuels, we believe every business deserves access to competitive fuel prices, regardless of the size of its fleet. Whether you operate a large haulage company, a fleet of vans, a taxi business or just a single commercial vehicle, we provide access to competitive fuel rates traditionally reserved for larger fleet operators.
 
-## Fleet Card Network Comparison
+## The 5 Featured Commercial Fuel Card Networks
 
-- **Keyfuels**: Best for HGVs and commercial van fleets. Over 3,500 sites with heavy vehicle access, high-flow pumps, and fixed commercial weekly pricing.
-- **UK Fuels**: Outstanding regional and town coverage. 3,500+ multi-brand sites with extensive supermarket integration.
-- **Esso Commercial / National**: Premium coverage across 1,200+ Esso stations, motorway service areas, and partner forecourts.
-- **Shell Fleet & CRT**: Optimum coverage for mixed vehicle fleets with access to Shell's motorway and trunk road network.
-- **BP Plus**: Access to 1,200+ BP stations including high-speed HGV bunkers and M&S Simply Food forecourt locations.
-- **Texaco Fastfuel**: Comprehensive national coverage with competitive pricing at Texaco and partner stations.
+1. **UK Fuels Card**: Extensive multi-brand network (3,500+ forecourts) with widespread supermarket access (Morrisons, Tesco) ideal for regional fleets, delivery vans, and contractors.
+2. **Fastfuel Card**: Texaco and UK Fuels combined network (3,500+ forecourts) providing exceptional coverage for vans and mixed commercial fleets.
+3. **Shell Fleet Card**: Commanding presence across UK motorways, trunk routes, and ports (1,100+ Shell & 2,500+ partner forecourts) with Shell FuelSave formulas.
+4. **BP Fleet Card**: High-volume commercial fleet access across Britain's motorway corridors and trunk roads (1,200+ BP & 2,000+ cross-acceptance forecourts).
+5. **Esso Card**: WEX / Esso national network (1,200+ Esso & 2,000+ partner forecourts) with strategic commuter and motorway corridor access.
+
+## Target Business Fleets Served
+
+- Large HGV Fleets
+- Small Haulage & Transport Companies
+- Delivery Vans & Couriers
+- Single Commercial Vans / Sole Traders
+- Taxi & Private Hire Fleets
+- Construction, Trades & Contractors
+- National Multi-Location Fleets
+
+## Why Fleet Fuels?
+
+- **Competitive Fuel Prices**: Big fleet rates regardless of volume.
+- **No Creeping Margins**: Fixed wholesale margin integrity.
+- **No Weekly Negotiations**: Stop calling to chase fair pricing.
+- **Big Fleet Buying Power**: Commercial parity for independent businesses.
+- **Multiple UK Networks**: Coverage matched to exact driver routes.
+- **Personal, Reliable Service**: Direct UK account support, HMRC-compliant weekly invoices.
 
 ## Contact & Corporate Information
 
 - **Website**: https://www.fleetfuels.co.uk
 - **Phone**: 0800 012 3456 (Mon-Fri 08:30 - 17:30 GMT)
-- **Email**: info@fleetfuels.co.uk
-- **Sales & Applications**: sales@fleetfuels.co.uk
-- **Country**: United Kingdom
-- **Headquarters**: United Kingdom
-- **Primary Domain**: https://www.fleetfuels.co.uk
-
-## Key Website URLs
-
-- Home: https://www.fleetfuels.co.uk/
-- Fuel Cards: https://www.fleetfuels.co.uk/#fuel-cards
-- Network Coverage: https://www.fleetfuels.co.uk/#network
-- Benefits & Savings: https://www.fleetfuels.co.uk/#benefits
-- Fuel Card Application: https://www.fleetfuels.co.uk/#apply
+- **Sales & Rates**: sales@fleetfuels.co.uk
+- **Enquiries**: info@fleetfuels.co.uk
+- **Region**: United Kingdom

@@ -1,22 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import DifferentiatorSection from '../components/DifferentiatorSection.astro';
+import TargetFleets from '../components/TargetFleets.astro';
 import FuelCardGrid from '../components/FuelCardGrid.astro';
 import BenefitsSection from '../components/BenefitsSection.astro';
 import NetworkCoverage from '../components/NetworkCoverage.astro';
-import BulkFuelSection from '../components/BulkFuelSection.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import { siteConfig } from '../data/siteData';
 ---
 
 <BaseLayout
-  title={`${siteConfig.name} | Commercial Fleet Fuel Cards & Nationwide Management`}
-  description="Reduce commercial fleet refuelling costs with Fleet Fuels. Fixed wholesale diesel pricing, HMRC-compliant VAT reporting, and nationwide forecourt access across 8,000+ UK stations."
+  title={`${siteConfig.name} | Big Fleet Prices. Whatever the Size of Your Business.`}
+  description="Competitive commercial fuel cards with transparent pricing, zero creeping margins, and no weekly negotiations. Access big fleet wholesale rates across 8,000+ UK forecourts."
 >
+  <!-- Hero Section with 2-Step Quote Form -->
   <Hero />
+
+  <!-- Core Differentiator: No Creeping Margins. No Weekly Negotiations. -->
+  <DifferentiatorSection />
+
+  <!-- Target Fleets: Built for Every Business Size -->
+  <TargetFleets />
+
+  <!-- Fuel Card Networks: 5 Featured Cards with Sleek Mockups -->
   <FuelCardGrid />
+
+  <!-- Value Proposition: Why Choose Fleet Fuels? (6 Pillars) -->
   <BenefitsSection />
+
+  <!-- UK Forecourt Network Coverage -->
   <NetworkCoverage />
-  <BulkFuelSection />
+
+  <!-- Closing Conversion CTA Banner -->
   <CtaBanner />
 </BaseLayout>
