@@ -43,6 +43,10 @@ jobs:
         working-directory: infra/terraform
         run: terraform init
 
+      - name: Import Existing Resource Group If Present
+        working-directory: infra/terraform
+        run: terraform import azurerm_resource_group.rg /subscriptions/717cfa33-1524-4715-a9e2-effb12af994d/resourceGroups/rg-fleetfuels-prod || true
+
       - name: Terraform Apply
         working-directory: infra/terraform
         run: terraform apply -auto-approve
