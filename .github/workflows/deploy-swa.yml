@@ -63,9 +63,9 @@ jobs:
           echo "swa_hostname=$HOSTNAME" >> "$GITHUB_OUTPUT"
 
   build-and-deploy:
-    name: Build & Deploy Astro to Azure SWA
     needs: infra
     runs-on: ubuntu-latest
+    name: Build & Deploy (Production)
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -100,6 +100,7 @@ jobs:
             echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Deploy to Azure Static Web Apps
+        id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ steps.get_token.outputs.token }}
