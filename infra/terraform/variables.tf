@@ -29,9 +29,9 @@ variable "static_web_app_name" {
 }
 
 variable "sku_tier" {
-  description = "The SKU tier of the Static Web App. 'Free' or 'Standard' (Standard is required for enterprise custom domains and SLA)."
+  description = "The SKU tier of the Static Web App. 'Free' or 'Standard' (Free tier provides £0/mo hosting for commercial static workloads)."
   type        = string
-  default     = "Standard"
+  default     = "Free"
   validation {
     condition     = contains(["Free", "Standard"], var.sku_tier)
     error_message = "The SKU tier must be either 'Free' or 'Standard'."
@@ -41,7 +41,7 @@ variable "sku_tier" {
 variable "sku_size" {
   description = "The SKU size of the Static Web App. 'Free' or 'Standard'."
   type        = string
-  default     = "Standard"
+  default     = "Free"
 }
 
 variable "custom_domain_name" {
