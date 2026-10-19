@@ -17,8 +17,10 @@ export interface SiteConfig {
   };
   email: {
     general: string;
+    enquiries: string;
     sales: string;
     support: string;
+    contact: string;
   };
   officeHours: string;
   address: {
@@ -40,16 +42,18 @@ export const siteConfig: SiteConfig = {
   tagline: 'Fuelling your fleet, powering your business',
   slogan: 'Big Fleet Prices. Small Business Service.',
   description:
-    'Big Fleet Prices. Whatever the Size of Your Business. Competitive commercial fuel cards with transparent pricing, zero creeping margins, and no weekly negotiations across the UK.',
+    'Fleet Fuels is a specialist commercial fuel card consultancy providing direct trade terms, wholesale commercial pricing, and transparent account management with zero creeping margins across the UK.',
   url: 'https://www.fleetfuels.co.uk',
   phone: {
-    display: '0800 012 3456',
-    raw: '+448000123456',
+    display: '07525 863838',
+    raw: '07525863838',
   },
   email: {
-    general: 'info@fleetfuels.co.uk',
+    general: 'enquiries@fleetfuels.co.uk',
+    enquiries: 'enquiries@fleetfuels.co.uk',
     sales: 'sales@fleetfuels.co.uk',
     support: 'support@fleetfuels.co.uk',
+    contact: 'contact@fleetfuels.co.uk',
   },
   officeHours: 'Monday - Friday: 08:30 - 17:30 GMT',
   address: {

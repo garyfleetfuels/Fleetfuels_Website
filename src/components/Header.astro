@@ -3,7 +3,7 @@ import { siteConfig } from '../data/siteData';
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs transition-all duration-200">
-  <!-- Top Utility Bar: Slogan & Direct Telephone -->
+  <!-- Top Utility Bar: Slogan, Enquiries Email & Direct Telephone -->
   <div class="bg-[#2D3136] text-white text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-700/50">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-2 text-slate-300">
@@ -16,29 +16,51 @@ import { siteConfig } from '../data/siteData';
       </div>
 
       <div class="flex items-center space-x-4 text-xs font-medium">
-        <a href={`tel:${siteConfig.phone.raw}`} class="flex items-center text-white hover:text-[#86ef9e] transition-colors group">
+        <a
+          href="mailto:enquiries@fleetfuels.co.uk"
+          class="hidden sm:flex items-center text-slate-300 hover:text-[#86ef9e] transition-colors group"
+        >
+          <svg class="w-3.5 h-3.5 mr-1.5 text-[#469B26] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>enquiries@fleetfuels.co.uk</span>
+        </a>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <a
+          href="tel:07525863838"
+          class="flex items-center text-white hover:text-[#86ef9e] transition-colors group"
+        >
           <svg class="w-3.5 h-3.5 mr-1.5 text-[#469B26] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          <span class="font-bold tracking-wide">Call Free: {siteConfig.phone.display}</span>
+          <span class="font-bold tracking-wide">07525 863838</span>
         </a>
-        <span class="text-slate-600 hidden sm:inline">|</span>
-        <span class="text-slate-400 hidden sm:inline">{siteConfig.officeHours}</span>
+        <span class="text-slate-600 hidden lg:inline">|</span>
+        <span class="text-slate-400 hidden lg:inline">{siteConfig.officeHours}</span>
       </div>
     </div>
   </div>
 
   <!-- Primary Navigation -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      <!-- Logo Branding with Tagline SVG / Vector -->
-      <a href="/" class="flex items-center space-x-3 group" aria-label="Fleet Fuels Homepage">
+    <div class="flex justify-between items-center min-h-[5rem] sm:min-h-[5.5rem] lg:min-h-[5.75rem] py-2">
+      <!-- Responsive Logo Branding -->
+      <a href="/" class="flex items-center group py-1" aria-label="Fleet Fuels Homepage">
+        <!-- Mobile (< md): Clean logo without tagline -->
         <img
-          src="/images/fleet_fuels_logo_with_tagline.jpg"
+          src="/images/fleet_fuels_logo_without_tagline_transparent.png"
+          alt="Fleet Fuels"
+          class="block md:hidden h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          width="200"
+          height="48"
+        />
+        <!-- Desktop (>= md): Full logo with tagline -->
+        <img
+          src="/images/fleet_fuels_logo_with_tagline_transparent.png"
           alt="Fleet Fuels - Fuelling your fleet, powering your business"
-          class="h-12 w-auto object-contain transition-transform group-hover:scale-[1.02] rounded-md"
-          width="240"
-          height="60"
+          class="hidden md:block h-14 lg:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          width="320"
+          height="64"
         />
       </a>
 
@@ -108,10 +130,22 @@ import { siteConfig } from '../data/siteData';
         Compare Fuel Rates
       </a>
       <a
-        href={`tel:${siteConfig.phone.raw}`}
+        href="tel:07525863838"
         class="w-full flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200"
       >
-        Call Free: {siteConfig.phone.display}
+        <svg class="w-4 h-4 mr-2 text-[#469B26]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        07525 863838
+      </a>
+      <a
+        href="mailto:enquiries@fleetfuels.co.uk"
+        class="w-full flex items-center justify-center px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100"
+      >
+        <svg class="w-3.5 h-3.5 mr-1.5 text-[#469B26]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        enquiries@fleetfuels.co.uk
       </a>
     </div>
   </div>

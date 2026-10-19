@@ -72,7 +72,7 @@ import { siteConfig } from '../data/siteData';
         <div class="pt-2 flex items-center justify-center lg:justify-start space-x-3 text-sm text-slate-300">
           <span>Prefer to talk directly?</span>
           <a href={`tel:${siteConfig.phone.raw}`} class="text-[#86ef9e] font-bold hover:underline flex items-center">
-            <span>Call Gary & the team on {siteConfig.phone.display}</span>
+            <span>Speak with a dedicated fleet account manager on {siteConfig.phone.display}</span>
           </a>
         </div>
       </div>
@@ -262,7 +262,7 @@ import { siteConfig } from '../data/siteData';
               </div>
 
               <p class="text-[11px] text-slate-400 text-center pt-1">
-                🔒 No credit card required. No pushy sales calls. Zero creeping margins guaranteed.
+                🔒 No credit card required. Zero creeping margins guaranteed. Rather send invoices directly? Email <a href={`mailto:${siteConfig.email.sales}`} class="text-[#469B26] font-semibold hover:underline">{siteConfig.email.sales}</a>.
               </p>
             </div>
           </form>
@@ -274,10 +274,13 @@ import { siteConfig } from '../data/siteData';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 class="text-xl font-black text-[#2D3136]">Thank You for Contacting Fleet Fuels!</h3>
+            <h3 class="text-xl font-black text-[#2D3136]">Rate Comparison Confirmation</h3>
             <p class="text-xs text-slate-600 leading-relaxed max-w-sm mx-auto">
               We have received your fleet information. A dedicated UK fuel specialist will compare wholesale card rates for your vehicle count and contact you within 1 business hour.
             </p>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 max-w-sm mx-auto">
+              <span>Have current fuel invoices handy? Expedite your comparison by forwarding them to <a href={`mailto:${siteConfig.email.sales}`} class="text-[#469B26] font-bold hover:underline">{siteConfig.email.sales}</a>.</span>
+            </div>
             <div class="pt-2 text-xs font-bold text-[#469B26]">
               Big Fleet Prices. Small Business Service.
             </div>

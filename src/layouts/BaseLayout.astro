@@ -14,7 +14,7 @@ interface Props {
 const {
   title = `${siteConfig.name} | Commercial Fleet Fuel Cards & Nationwide Management`,
   description = siteConfig.description,
-  ogImage = '/images/fleet_fuels_logo_with_tagline.jpg',
+  ogImage = '/images/fleet_fuels_logo_with_tagline_transparent.png',
   canonicalUrl = Astro.url.href,
 } = Astro.props;
 
@@ -28,11 +28,11 @@ const structuredData = {
       url: siteConfig.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/images/fleet_fuels_logo_with_tagline.jpg`,
+        url: `${siteConfig.url}/images/fleet_fuels_logo_with_tagline_transparent.png`,
       },
       description: siteConfig.description,
       telephone: siteConfig.phone.display,
-      email: siteConfig.email.general,
+      email: siteConfig.email.contact,
       address: {
         '@type': 'PostalAddress',
         streetAddress: siteConfig.address.line1,
@@ -40,8 +40,21 @@ const structuredData = {
         postalCode: siteConfig.address.postcode,
         addressCountry: 'GB',
       },
-      sameAs: [
-        'https://github.com/garyfleetfuels/Fleetfuels_Website',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: siteConfig.phone.display,
+          contactType: 'sales',
+          email: siteConfig.email.sales,
+          areaServed: 'GB',
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: siteConfig.phone.display,
+          contactType: 'customer service',
+          email: siteConfig.email.support,
+          areaServed: 'GB',
+        },
       ],
     },
     {

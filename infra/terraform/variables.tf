@@ -64,7 +64,7 @@ variable "tags" {
     ManagedBy   = "Terraform"
     Environment = "Production"
     CostCenter  = "Digital-Infrastructure"
-    Owner       = "Gary / Fleet Fuels"
+    Owner       = "Fleet Fuels Commercial Management"
     Repository  = "https://github.com/garyfleetfuels/Fleetfuels_Website"
   }
 }
