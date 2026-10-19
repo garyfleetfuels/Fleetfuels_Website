@@ -1,0 +1,285 @@
+---
+// CookieBanner.astro - UK GDPR / PECR Compliant Cookie Consent with Google Consent Mode v2
+---
+
+<div
+  id="cookie-consent-banner"
+  class="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:max-w-xl z-50 bg-[#2D3136] text-white rounded-2xl shadow-2xl border border-slate-700/80 p-5 sm:p-6 backdrop-blur-md transition-all duration-300 transform translate-y-8 opacity-0 pointer-events-none"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-desc"
+>
+  <!-- Simple Overview View -->
+  <div id="cookie-summary-view" class="space-y-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[#469B26] animate-pulse"></span>
+        <span class="text-xs font-bold uppercase tracking-wider text-[#86ef9e]">Privacy & Cookies</span>
+      </div>
+      <span class="text-[11px] font-semibold text-slate-400 bg-white/5 px-2.5 py-0.5 rounded-full border border-slate-700">
+        UK GDPR & PECR
+      </span>
+    </div>
+
+    <div>
+      <h2 id="cookie-banner-title" class="text-base sm:text-lg font-black text-white tracking-tight">
+        Your Privacy & Cookie Choices
+      </h2>
+      <p id="cookie-banner-desc" class="text-xs text-slate-300 leading-relaxed mt-1">
+        We use cookies and similar technologies to ensure core website functionality, analyse route comparison engagement, and deliver personalised fleet fuel management content. In accordance with UK PECR regulations, non-essential cookies require your explicit consent before activating.
+      </p>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+      <button
+        type="button"
+        id="cookie-btn-accept-all"
+        class="btn-primary py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm text-white shadow-md text-center transition-all focus:outline-none focus:ring-2 focus:ring-[#86ef9e]"
+      >
+        Accept All Cookies
+      </button>
+
+      <button
+        type="button"
+        id="cookie-btn-reject-all"
+        class="py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm text-slate-200 bg-slate-700 hover:bg-slate-600 hover:text-white transition-all text-center border border-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400"
+      >
+        Reject Non-Essential
+      </button>
+
+      <button
+        type="button"
+        id="cookie-btn-manage"
+        class="py-2.5 px-3 rounded-xl font-semibold text-xs text-slate-300 hover:text-white underline text-center focus:outline-none focus:ring-2 focus:ring-[#86ef9e]"
+      >
+        Customise Preferences
+      </button>
+    </div>
+  </div>
+
+  <!-- Detailed Preferences View (Accordion / Modal State) -->
+  <div id="cookie-preferences-view" class="hidden space-y-4 pt-1">
+    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+      <div>
+        <h2 class="text-base font-black text-white">Customise Cookie Preferences</h2>
+        <p class="text-[11px] text-slate-400">Choose which categories of cookies you consent to:</p>
+      </div>
+      <button
+        type="button"
+        id="cookie-btn-back"
+        class="text-xs text-slate-400 hover:text-white p-1 rounded-md"
+        aria-label="Back to summary"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Category 1: Necessary -->
+    <div class="p-3 rounded-xl bg-white/5 border border-slate-700/60 space-y-1">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-bold text-white">1. Strictly Necessary Cookies</span>
+        <span class="text-[10px] font-bold text-[#86ef9e] bg-[#469B26]/20 px-2 py-0.5 rounded">Always Active</span>
+      </div>
+      <p class="text-[11px] text-slate-300 leading-normal">
+        Required for core website security, load balancing, fraud prevention, and remembering your consent preferences. These cannot be disabled.
+      </p>
+    </div>
+
+    <!-- Category 2: Analytics -->
+    <div class="p-3 rounded-xl bg-white/5 border border-slate-700/60 space-y-2">
+      <div class="flex items-center justify-between">
+        <label for="cookie-toggle-analytics" class="text-xs font-bold text-white cursor-pointer">
+          2. Analytics & Performance Cookies
+        </label>
+        <input
+          type="checkbox"
+          id="cookie-toggle-analytics"
+          class="w-4 h-4 rounded text-[#469B26] focus:ring-[#469B26] accent-[#469B26] cursor-pointer"
+        />
+      </div>
+      <p class="text-[11px] text-slate-300 leading-normal">
+        Helps us understand how fleet operators navigate our rate comparisons and fuel network maps so we can optimize site performance (Google Analytics 4).
+      </p>
+    </div>
+
+    <!-- Category 3: Marketing / Ad Personalization -->
+    <div class="p-3 rounded-xl bg-white/5 border border-slate-700/60 space-y-2">
+      <div class="flex items-center justify-between">
+        <label for="cookie-toggle-marketing" class="text-xs font-bold text-white cursor-pointer">
+          3. Marketing & Ad Personalisation
+        </label>
+        <input
+          type="checkbox"
+          id="cookie-toggle-marketing"
+          class="w-4 h-4 rounded text-[#469B26] focus:ring-[#469B26] accent-[#469B26] cursor-pointer"
+        />
+      </div>
+      <p class="text-[11px] text-slate-300 leading-normal">
+        Used to measure our commercial fuel advertising effectiveness and tailor relevant B2B fuel card promotions across search and social channels.
+      </p>
+    </div>
+
+    <div class="flex items-center justify-end space-x-2 pt-2 border-t border-slate-700">
+      <button
+        type="button"
+        id="cookie-btn-save-preferences"
+        class="btn-primary py-2 px-4 rounded-xl font-bold text-xs text-white shadow-md focus:outline-none focus:ring-2 focus:ring-[#86ef9e]"
+      >
+        Save Selected Preferences
+      </button>
+      <button
+        type="button"
+        id="cookie-btn-accept-all-prefs"
+        class="py-2 px-4 rounded-xl font-bold text-xs text-slate-200 bg-slate-700 hover:bg-slate-600 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-slate-400"
+      >
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    const STORAGE_KEY = 'fleetfuels_cookie_consent';
+    const PREFS_KEY = 'fleetfuels_cookie_consent_preferences';
+
+    const banner = document.getElementById('cookie-consent-banner');
+    const summaryView = document.getElementById('cookie-summary-view');
+    const prefsView = document.getElementById('cookie-preferences-view');
+
+    const btnAcceptAll = document.getElementById('cookie-btn-accept-all');
+    const btnRejectAll = document.getElementById('cookie-btn-reject-all');
+    const btnManage = document.getElementById('cookie-btn-manage');
+    const btnBack = document.getElementById('cookie-btn-back');
+    const btnSavePrefs = document.getElementById('cookie-btn-save-preferences');
+    const btnAcceptAllPrefs = document.getElementById('cookie-btn-accept-all-prefs');
+
+    const toggleAnalytics = document.getElementById('cookie-toggle-analytics');
+    const toggleMarketing = document.getElementById('cookie-toggle-marketing');
+
+    function updateGoogleConsent(analytics, marketing) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+          analytics_storage: analytics ? 'granted' : 'denied',
+          ad_storage: marketing ? 'granted' : 'denied',
+          ad_user_data: marketing ? 'granted' : 'denied',
+          ad_personalization: marketing ? 'granted' : 'denied',
+        });
+      }
+    }
+
+    function showBanner() {
+      if (!banner) return;
+      banner.classList.remove('pointer-events-none', 'translate-y-8', 'opacity-0');
+      banner.classList.add('translate-y-0', 'opacity-100');
+    }
+
+    function hideBanner() {
+      if (!banner) return;
+      banner.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+      banner.classList.remove('translate-y-0', 'opacity-100');
+    }
+
+    function applyFullConsent() {
+      localStorage.setItem(STORAGE_KEY, 'granted');
+      localStorage.setItem(
+        PREFS_KEY,
+        JSON.stringify({ necessary: true, analytics: true, marketing: true })
+      );
+      updateGoogleConsent(true, true);
+      hideBanner();
+    }
+
+    function applyRejectAll() {
+      localStorage.setItem(STORAGE_KEY, 'denied');
+      localStorage.setItem(
+        PREFS_KEY,
+        JSON.stringify({ necessary: true, analytics: false, marketing: false })
+      );
+      updateGoogleConsent(false, false);
+      hideBanner();
+    }
+
+    function applyCustomPreferences() {
+      const analytics = toggleAnalytics ? toggleAnalytics.checked : false;
+      const marketing = toggleMarketing ? toggleMarketing.checked : false;
+
+      const consentValue = analytics && marketing ? 'granted' : 'custom';
+      localStorage.setItem(STORAGE_KEY, consentValue);
+      localStorage.setItem(
+        PREFS_KEY,
+        JSON.stringify({ necessary: true, analytics: analytics, marketing: marketing })
+      );
+
+      updateGoogleConsent(analytics, marketing);
+      hideBanner();
+    }
+
+    // Initialize state
+    const savedConsent = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+    const savedPrefsStr = typeof localStorage !== 'undefined' ? localStorage.getItem(PREFS_KEY) : null;
+
+    if (savedPrefsStr && toggleAnalytics && toggleMarketing) {
+      try {
+        const prefs = JSON.parse(savedPrefsStr);
+        toggleAnalytics.checked = !!prefs.analytics;
+        toggleMarketing.checked = !!prefs.marketing;
+      } catch (e) {
+        toggleAnalytics.checked = savedConsent === 'granted';
+        toggleMarketing.checked = savedConsent === 'granted';
+      }
+    } else if (toggleAnalytics && toggleMarketing) {
+      toggleAnalytics.checked = savedConsent === 'granted';
+      toggleMarketing.checked = savedConsent === 'granted';
+    }
+
+    // If no prior consent decision, prompt the banner
+    if (!savedConsent) {
+      setTimeout(showBanner, 250);
+    }
+
+    // Event listeners
+    if (btnAcceptAll) btnAcceptAll.addEventListener('click', applyFullConsent);
+    if (btnAcceptAllPrefs) btnAcceptAllPrefs.addEventListener('click', applyFullConsent);
+    if (btnRejectAll) btnRejectAll.addEventListener('click', applyRejectAll);
+    if (btnSavePrefs) btnSavePrefs.addEventListener('click', applyCustomPreferences);
+
+    if (btnManage && summaryView && prefsView) {
+      btnManage.addEventListener('click', function () {
+        summaryView.classList.add('hidden');
+        prefsView.classList.remove('hidden');
+      });
+    }
+
+    if (btnBack && summaryView && prefsView) {
+      btnBack.addEventListener('click', function () {
+        prefsView.classList.add('hidden');
+        summaryView.classList.remove('hidden');
+      });
+    }
+
+    // Enable opening cookie preferences via footer link or any data-cookie-settings trigger
+    document.addEventListener('click', function (e) {
+      const target = e.target && e.target.closest ? e.target.closest('[data-cookie-settings], a[href="/cookies"]') : null;
+      if (target) {
+        e.preventDefault();
+        if (summaryView && prefsView) {
+          summaryView.classList.add('hidden');
+          prefsView.classList.remove('hidden');
+        }
+        showBanner();
+      }
+    });
+
+    // Close on Escape key if banner is open
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && banner && !banner.classList.contains('pointer-events-none')) {
+        // Only allow escape if user already has a saved consent decision
+        if (localStorage.getItem(STORAGE_KEY)) {
+          hideBanner();
+        }
+      }
+    });
+  })();
+</script>

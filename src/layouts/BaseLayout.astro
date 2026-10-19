@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import { siteConfig } from '../data/siteData';
 import '../styles/global.css';
 
@@ -76,6 +77,43 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Consent Mode v2 Default Initialization -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Retrieve prior user decision if present
+      const savedConsent = typeof localStorage !== 'undefined' ? localStorage.getItem('fleetfuels_cookie_consent') : null;
+
+      if (savedConsent === 'granted') {
+        gtag('consent', 'default', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'wait_for_update': 500
+        });
+      } else {
+        // Default denied for UK GDPR / PECR compliance
+        gtag('consent', 'default', {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'wait_for_update': 500
+        });
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) - replace G-MEASUREMENT_ID with environment variable or placeholder -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER');
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
@@ -119,5 +157,6 @@ const structuredData = {
       <slot />
     </main>
     <Footer />
+    <CookieBanner />
   </body>
 </html>
