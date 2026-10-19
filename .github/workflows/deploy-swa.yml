@@ -13,10 +13,9 @@ permissions:
 jobs:
   infra:
     name: Provision Azure Infrastructure (Terraform)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     continue-on-error: true
     outputs:
-      swa_api_key: ${{ steps.tf_outputs.outputs.swa_api_key }}
       swa_hostname: ${{ steps.tf_outputs.outputs.swa_hostname }}
     steps:
       - name: Checkout Repository
@@ -58,17 +57,13 @@ jobs:
         id: tf_outputs
         working-directory: infra/terraform
         run: |
-          API_KEY=$(terraform output -raw static_web_app_api_key)
-          echo "::add-mask::$API_KEY"
-          echo "swa_api_key=$API_KEY" >> "$GITHUB_OUTPUT"
-
           HOSTNAME=$(terraform output -raw static_web_app_default_hostname)
           echo "swa_hostname=$HOSTNAME" >> "$GITHUB_OUTPUT"
 
   build-and-deploy:
     needs: infra
     if: always() && !cancelled()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     name: Build & Deploy (Production)
     steps:
       - name: Checkout Repository
